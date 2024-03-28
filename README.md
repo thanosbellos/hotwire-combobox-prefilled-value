@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+### scenario 1 - async search with freetext input
 
-Things you may want to cover:
+- User can choose his name from the list of already registered user names.
+- He can also input a new name in the text box, if he can't find his name in the list.
+- When he visits the edit page, the name is not prefilled in the combobox (the display value at least is missing)
 
-* Ruby version
 
-* System dependencies
+### scenario 2 - grouped select
 
-* Configuration
+- User can choose his favorite movie from the list of movies.
+- The movies are grouped by genre.
+- When he visits the edit page, the movie is not prefilled in the combobox (the display value at least is missing)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup
+- Run ./bin/rails db:seed to seed the database with some dummy movies data
