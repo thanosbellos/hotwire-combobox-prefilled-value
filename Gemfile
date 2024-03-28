@@ -68,3 +68,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "hotwire_combobox", "~> 0.2.0"
+gem 'pagy', '~> 7.0' # omit patch digit
