@@ -8,3 +8,22 @@
   Movie.create(genre: genre_name, name: "#{genre_name} - Some movie")
   Movie.create(genre: genre_name, name: "#{genre_name} - Some another movie")
 end
+
+[
+  {
+    abbreviation: "AL", name: "Alabama"
+  },
+  {
+    name: "Alaska", abbreviation: "AK"
+  },
+  {
+    abbreviation: "AZ", name: "Arizona"
+  },
+  {
+    abbreviation: "AR", name: "Arkansas"
+  }, {
+    abbreviation: "CA", name: "California"
+  }
+].each do |state_data|
+  State.create(state_data)
+end

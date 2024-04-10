@@ -21,6 +21,11 @@
     <%= form.combobox :movie_id, Movie.all.group_by(&:genre) %>
   </div>
 
+  <div class="my-5">
+    <%= form.label :visited_states %>
+    <%= form.combobox :visited_state_ids, State.all, multiselect_chip_src: new_state_chip_path %>
+  </div>
+
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>

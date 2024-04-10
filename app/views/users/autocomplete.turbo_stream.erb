@@ -1,1 +1,1 @@
-<%= async_combobox_options @users || [], render_in: {partial: "users/user"}, next_page: @pagy.next %>
+<%= async_combobox_options @users.pluck(:name), render_in: {partial: "users/user"}, next_page: @pagy.next %>

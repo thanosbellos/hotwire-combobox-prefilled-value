@@ -5,6 +5,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  has_many :visits
+  has_many :visited_states, through: :visits, source: :state
+
   def to_combobox_display
     name
   end

@@ -46,8 +46,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
+      if @user.update(user_params.merge(visited_state_ids:))
+        format.html { redirect_back_or_to user_url(@user), notice: "User was successfully updated." }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -76,5 +76,9 @@ class UsersController < ApplicationController
   # Only allow a list of trusted parameters through.
   def user_params
     params.require(:user).permit(:name, :movie_id)
+  end
+
+  def visited_state_ids
+    params[:user][:visited_state_ids]&.split(",") || []
   end
 end
