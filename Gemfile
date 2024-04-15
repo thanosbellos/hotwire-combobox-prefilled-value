@@ -69,5 +69,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "hotwire_combobox", "~> 0.2"
+gem "hotwire_combobox", github: "josefarias/hotwire_combobox", branch: "main"
 gem "pagy", "~> 7.0" # omit patch digit
